@@ -19,7 +19,9 @@ const DeleteModal = ({ isOpen, close }) => {
         <Alert variant="danger">Are you sure?</Alert>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={close}>Cancel</Button>
+        <Button onClick={close} variant="secondary">
+          Cancel
+        </Button>
         <Button className="text-danger" variant="link" onClick={handleDelete}>
           Erase Account
         </Button>

@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <Container>
-      <Row className="mt-5">
-        <Col xs={{ span: 12 }} md={{ span: 6 }} className="mb-5">
+      <Row className="mt-5 ">
+        <Col xs={{ span: 12 }} md={{ span: 6 }} className="mb-6">
           <h1>Welocome to Spanish Trainer</h1>
           <p>
             This app is design to help teachers and student when teaching and
@@ -16,35 +16,20 @@ const HomePage = () => {
             your skils.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            sapiente porro accusamus quibusdam labore. Dolorem reiciendis
-            quaerat numquam asperiores repellendus voluptates quos suscipit, non
-            aliquam at error minima. Aperiam, doloribus!. Lorem, ipsum dolor sit
-            amet consectetur adipisicing elit. Vel alias cumque pariatur quia
-            debitis ab fugiat consectetur quos eaque, excepturi sapiente
-            reiciendis nesciunt eos vitae deserunt ipsa? Accusantium, numquam
-            quisquam.
+            Learning is easy. You just have to use the tools that help to be
+            consistent because prseverance is the key.
           </p>
-          <div>
-            <Link to={routes.login}>Login</Link> to your account or
-            <Button className="m-2" as={Link} to={routes.register}>
-              Register
-            </Button>
-          </div>
+          <p>
+            Upgrade your Spanish skills <b>now!</b>
+          </p>
         </Col>
 
         <Col>
           <img
             className="img-fluid"
-            src="/img/task-manager.svg"
+            src="/img/3255469.jpg"
             alt="spanish trainer"
           />
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non facere
-            corrupti praesentium et quod. Sequi tempora voluptas, consequuntur
-            deserunt, delectus asperiores quas incidunt ducimus vitae non
-            nostrum cum! Fuga, exercitationem.
-          </p>
         </Col>
       </Row>
     </Container>
