@@ -18,7 +18,7 @@ const UsersPage = () => {
   const { listUsers } = useAuth();
   return (
     <>
-      <Container>
+      <Container style={{ minHeight: "60vh" }}>
         <h1 className="mx-4 text-center">Users</h1>
         <Table variant="dark" className="mx-4 text-center" responsive="sm">
           <thead>

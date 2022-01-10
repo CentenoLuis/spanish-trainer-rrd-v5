@@ -4,7 +4,7 @@ import DashboardPage from "../pages/Dashboard";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import NotFoundPage from "../pages/NotFoundPage";
-import QuizzesPage from "../pages/QuizzesPage";
+import QuizzesPage from "../pages/Quizzes/QuizzesPage";
 import QuizzPage from "../pages/QuizzPage";
 import RegisterPage from "../pages/RegisterPage";
 import UsersPage from "../pages/UsersPage";

@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import useAuth from "../auth/useAuth";
 import { Link } from "react-router-dom";
 import {
@@ -13,6 +14,7 @@ import {
 import { useForm } from "react-hook-form";
 import registerResolver from "../validations/registerResolver";
 import { routes } from "../helpers/routes";
+import { roles } from "../helpers/roles";
 
 const RegisterPage = () => {
   const {
@@ -23,12 +25,17 @@ const RegisterPage = () => {
   } = useForm({ resolver: registerResolver });
 
   const onSubmit = (formData) => {
-    alert("user created");
+    formData.role = roles.regular;
+    formData.quizzes = [];
+    axios.post("https://ancient-wave-13204.herokuapp.com/api/signup", formData);
+    reset();
   };
+
+  //unfold is a brand, product, web, illustration agency
 
   return (
     <>
-      <Container>
+      <Container style={{ minHeight: "60vh" }}>
         <Row>
           <Col className="mt-4">
             <Card

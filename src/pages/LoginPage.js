@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import useAuth from "../auth/useAuth";
@@ -28,12 +29,13 @@ const LoginPage = () => {
   const { login, isLogged } = useAuth();
 
   const onSubmit = (formData) => {
-    alert("user created");
+    const userCredentials = formData;
+    login(userCredentials, location.state?.from);
   };
 
   return (
     <>
-      <Container>
+      <Container style={{ minHeight: "60vh" }}>
         <Row>
           <Col className="mt-4">
             <Card
@@ -52,6 +54,7 @@ const LoginPage = () => {
                     placeholder="Email"
                     className="mb-2"
                   ></Form.Control>
+
                   {errors?.email && (
                     <Form.Text>
                       <Alert variant="danger">{errors.email.message}</Alert>
@@ -75,11 +78,7 @@ const LoginPage = () => {
                 </Form.Group>
               </Form>
 
-              <Button
-                onClick={() => login(userCredentials, location.state?.from)}
-              >
-                Login
-              </Button>
+              <Button onClick={handleSubmit(onSubmit)}>Login</Button>
 
               <p className="mt-4 text-center">
                 Don't have an account?{" "}
